@@ -1,0 +1,66 @@
+/* @import './base.css'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Poppins:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'icon';
+  src: url('@/fonts/iconmoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@layer base {
+  :root {
+    --cl-brand: 240, 98, 58;
+    --cl-brand-light: #ffecec;
+    --cl-headline: 38, 48, 86;
+    --cl-headline-dark: #1e133e;
+    --cl-base: #898d9d;
+    --cl-base-light: #fafaff;
+  }
+
+  html {
+    @apply font-primary text-base/[1.75rem] text-primary font-normal overflow-x-hidden;
+  }
+  html.block {
+    @apply overflow-y-hidden;
+  }
+  p {
+    @apply xl:text-lg/[2.25rem];
+  }
+  a,
+  input,
+  button,
+  select,
+  span,
+  label {
+    @apply xl:text-lg/[1.75rem];
+  }
+}
+
+@layer components {
+  .icon {
+    @apply font-icon font-normal not-italic leading-none normal-case antialiased text-2xl transition-all duration-300 ease-in;
+  }
+
+  .icon-facebook2 {
+    @apply before:content-["\ea91"] text-white;
+  }
+  .icon-instagram {
+    @apply before:content-["\ea92"] text-white;
+  }
+  .icon-pinterest {
+    @apply before:content-["\ead1"] text-white;
+  }
+  .icon-twitter {
+    @apply before:content-["\ea96"] text-white;
+  }
+  .icon-youtube {
+    @apply before:content-["\ea9d"] text-white;
+  }
+}
