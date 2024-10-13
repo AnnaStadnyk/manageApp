@@ -22,6 +22,7 @@
     --cl-headline-dark: #1e133e;
     --cl-base: #898d9d;
     --cl-base-light: #fafaff;
+    --cl-brand-white: 255, 255, 255;
   }
 
   html {

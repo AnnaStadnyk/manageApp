@@ -29,6 +29,9 @@ export default {
         primary: {
           light: 'var(--cl-base-light)',
           DEFAULT: 'var(--cl-base)',
+        },
+        wt: {
+          DEFAULT: withOpacity('--cl-brand-white'),
         }
       },
 
@@ -52,6 +55,20 @@ export default {
           '0%': { opacity: 0, transform: 'scale(0.9)' },
           '100%': { opacity: 1, transform: 'scale(1)' },
         }
+      },
+      keyframes: {
+        header: {
+          '0%': { opacity: 0, padding: '32px' },
+          '100%': { opacity: 1, padding: '16px' },
+        },
+        headerOut: {
+          '0%': { opacity: 1, padding: '16px' },
+          '100%': { opacity: 0, padding: '32px' },
+        }
+      },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'padding',
       }
     },
   },
