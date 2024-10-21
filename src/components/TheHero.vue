@@ -1,11 +1,12 @@
 <template>
   <TheSection hero="true">
     <template #title>
-      <h1 class="text-4xl text-headline font-semibold text-center xl:text-5xl/[4rem] lg:text-left">
+      <h1 class="text-center text-4xl font-semibold text-headline lg:text-left xl:text-5xl/[4rem]">
         Lorem ipsum dolor sit amet consectetur adipisicing.
       </h1>
       <p class="text-center lg:text-left">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, aut! Perferendis placeat minus praesentium dolorem.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, aut! Perferendis
+        placeat minus praesentium dolorem.
       </p>
       <TheButton
         @click="toogleContact"
@@ -17,7 +18,7 @@
     </template>
     <template #description>
       <div
-        class="grid grid-rows-[repeat(3,260px)] sm:grid-cols-[repeat(2,minmax(0,280px))] sm:grid-rows-[repeat(2,1fr)] gap-4 justify-center"
+        class="grid grid-rows-[repeat(3,260px)] justify-center gap-4 sm:grid-cols-[repeat(2,minmax(0,280px))] sm:grid-rows-[repeat(2,1fr)]"
       >
         <TheChart>
           <canvas id="barChart" class="bg-primary-light"></canvas>
@@ -26,15 +27,15 @@
           <canvas id="doughnutChart"></canvas>
         </TheChart>
         <TheChart
-          class="h-full sm:col-span-2 sm:w-1/2 sm:justify-self-center grid grid-cols-2 grid-rows-[1.5fr_1fr] gap-3 lg:gap-3.5"
+          class="grid h-full grid-cols-2 grid-rows-[1.5fr_1fr] gap-3 sm:col-span-2 sm:w-1/2 sm:justify-self-center lg:gap-3.5"
         >
-          <div class="col-span-2 bg-primary-light p-3.5 flex">
+          <div class="col-span-2 flex bg-primary-light p-3.5">
             <span class="self-end font-oxygen text-5xl text-headline">89.74%</span>
           </div>
-          <div class="bg-brand text-white p-3.5 flex">
+          <div class="flex bg-brand p-3.5 text-white">
             <span class="self-end font-oxygen text-xl">+1.5%</span>
           </div>
-          <div class="bg-primary-light p-3.5 flex">
+          <div class="flex bg-primary-light p-3.5">
             <span class="self-end font-oxygen text-xl text-headline">88.24%</span>
           </div>
         </TheChart>

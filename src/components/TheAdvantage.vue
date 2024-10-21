@@ -1,11 +1,12 @@
 <template>
   <TheSection>
     <template #title>
-      <h2 class="text-3xl text-headline font-semibold text-center xl:text-4xl/[3rem] lg:text-left">
+      <h2 class="text-center text-3xl font-semibold text-headline lg:text-left xl:text-4xl/[3rem]">
         Lorem ipsum dolor sit.
       </h2>
       <p class="text-center lg:text-left">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio delectus veritatis aperiam perferendis omnis nostrum, cumque error obcaecati assumenda eos?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio delectus veritatis
+        aperiam perferendis omnis nostrum, cumque error obcaecati assumenda eos?
       </p>
     </template>
     <template #description>
@@ -13,13 +14,13 @@
         <li
           v-for="(advantage, i) in advantages"
           :key="i"
-          class="grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] xl:grid-rows-[56px_1fr] gap-x-4 md:gap-x-6 xl:gap-x-8 gap-y-8 xl:gap-y-6 items-center relative lg:before:content-none before:content-[''] before:absolute before:top-0 before:left-0 before:h-[56px] before:w-full before:bg-brand-light before:rounded-l-full before:-z-10"
+          class="relative grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] items-center gap-x-4 gap-y-8 before:absolute before:left-0 before:top-0 before:-z-10 before:h-[56px] before:w-full before:rounded-l-full before:bg-brand-light before:content-[''] md:gap-x-6 lg:before:content-none xl:grid-rows-[56px_1fr] xl:gap-x-8 xl:gap-y-6"
         >
           <span
-            class="lg:row-span-2 min-w-12 py-3.5 md:px-6 lg:px-8 bg-brand text-white text-center font-semibold rounded-full self-start"
+            class="min-w-12 self-start rounded-full bg-brand py-3.5 text-center font-semibold text-white md:px-6 lg:row-span-2 lg:px-8"
             >{{ String(i + 1).padStart(2, '0') }}</span
           >
-          <h6 class="text-xl text-headline font-semibold">{{ advantage.title }}</h6>
+          <h6 class="text-xl font-semibold text-headline">{{ advantage.title }}</h6>
           <p class="col-span-2 lg:col-auto lg:text-left">{{ advantage.description }}</p>
         </li>
       </ul>

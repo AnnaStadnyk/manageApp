@@ -1,19 +1,19 @@
 <template>
   <section
-    class="max-w-[1920px] m-auto mt-20 md:mt-24 2xl:mt-28 flex flex-col gap-8 xl:gap-10 justify-center items-center"
+    class="m-auto mt-20 flex max-w-[1920px] flex-col items-center justify-center gap-8 md:mt-24 xl:gap-10 2xl:mt-28"
   >
-    <h2 class="text-3xl text-headline font-semibold xl:text-4xl/[3rem]">Lorem ipsum dolor</h2>
+    <h2 class="text-3xl font-semibold text-headline xl:text-4xl/[3rem]">Lorem ipsum dolor</h2>
     <swiper-container init="false" ref="swiperEl" class="max-w-full">
-      <swiper-slide v-for="(testimonial, i) in testimonials" :key="i" class="h-auto flex flex-col">
+      <swiper-slide v-for="(testimonial, i) in testimonials" :key="i" class="flex h-auto flex-col">
         <div
-          class="mt-8 relative px-3.5 pb-3.5 pt-11 bg-primary-light flex flex-col gap-3.5 items-center rounded-sm flex-[1_1_100%]"
+          class="relative mt-8 flex flex-[1_1_100%] flex-col items-center gap-3.5 rounded-sm bg-primary-light px-3.5 pb-3.5 pt-11"
         >
           <img
             :src="testimonial.url"
             :alt="testimonial.name"
-            class="w-16 h-16 aspect-square object-center object-cover rounded-full absolute top-0 left-1/2 transform -translate-y-1/2 -translate-x-1/2"
+            class="absolute left-1/2 top-0 aspect-square h-16 w-16 -translate-x-1/2 -translate-y-1/2 transform rounded-full object-cover object-center"
           />
-          <h6 class="text-sm text-headline font-semibold">{{ testimonial.name }}</h6>
+          <h6 class="text-sm font-semibold text-headline">{{ testimonial.name }}</h6>
           <p class="text-center">{{ testimonial.text }}</p>
         </div>
       </swiper-slide>

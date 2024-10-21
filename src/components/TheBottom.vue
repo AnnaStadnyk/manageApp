@@ -1,7 +1,7 @@
 <template>
   <TheSection class="bg-brand py-4 lg:py-8" footer="true">
     <template #title>
-      <h3 class="text-2xl text-white font-semibold text-center xl:text-3xl/[2.5rem] lg:text-left">
+      <h3 class="text-center text-2xl font-semibold text-white lg:text-left xl:text-3xl/[2.5rem]">
         Lorem ipsum dolor sit amet consectetur.
       </h3>
     </template>

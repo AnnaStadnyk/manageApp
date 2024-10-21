@@ -2,7 +2,8 @@
   <TheHeader :show="isShown" @show-contact="toogleContact"></TheHeader>
 
   <main
-    class="bg-[url('../assets/bg.svg'),url('../assets/bg-b.svg')] bg-no-repeat [background-position:top_right,bottom_left] bg-[length:100vmax_auto] lg:bg-[length:75vmax_auto] xl:bg-[length:50vmax_auto]">
+    class="bg-[url('../assets/bg.svg'),url('../assets/bg-b.svg')] bg-[length:100vmax_auto] bg-no-repeat [background-position:top_right,bottom_left] lg:bg-[length:75vmax_auto] xl:bg-[length:50vmax_auto]"
+  >
     <TheHero @show-contact="toogleContact"></TheHero>
     <TheAdvantage></TheAdvantage>
     <TheTesimonial @show-contact="toogleContact"></TheTesimonial>
@@ -46,4 +47,3 @@ export default {
   }
 }
 </script>
-

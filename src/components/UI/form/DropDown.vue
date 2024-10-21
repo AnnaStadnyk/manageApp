@@ -7,13 +7,13 @@
     <ListboxLabel
       :for="id"
       v-if="label"
-      class="block mb-3 lg:mb-4 text-sm text-headline font-semibold"
+      class="mb-3 block text-sm font-semibold text-headline lg:mb-4"
       >{{ label }}
     </ListboxLabel>
     <div class="relative">
       <ListboxButton
         @focus="this.$emit('cancel-error')"
-        class="relative w-full cursor-default outline-0 border-2 rounded-full bg-white py-2.5 xl:py-3 px-8 text-left focus:border-brand focus-visible:border-brand transition duration-300 ease-in"
+        class="relative w-full cursor-default rounded-full border-2 bg-white px-8 py-2.5 text-left outline-0 transition duration-300 ease-in focus:border-brand focus-visible:border-brand xl:py-3"
         :class="{ 'border-brand': error !== '' }"
       >
         <span class="block truncate">{{ modelValue.name }}</span>
@@ -28,7 +28,7 @@
         leave-to-class="opacity-0"
       >
         <ListboxOptions
-          class="absolute mt-1 max-h-36 w-full overflow-auto rounded-xl bg-white border-2 focus:outline-none z-10"
+          class="absolute z-10 mt-1 max-h-36 w-full overflow-auto rounded-xl border-2 bg-white focus:outline-none"
         >
           <ListboxOption
             v-slot="{ active, selected }"
@@ -40,7 +40,7 @@
             <li
               :class="[
                 active ? 'bg-primary-light text-headline' : 'text-base',
-                'relative cursor-default select-none py-2 px-8'
+                'relative cursor-default select-none px-8 py-2'
               ]"
             >
               <span :class="[selected ? 'font-medium' : 'font-normal', 'block truncate']">{{
@@ -89,7 +89,7 @@ export default {
     id: {
       type: String,
       default: ''
-    },
+    }
   },
   emits: ['update:modelValue']
 }

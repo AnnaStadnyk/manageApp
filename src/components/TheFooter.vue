@@ -1,10 +1,10 @@
 <template>
   <footer class="bg-headline py-8 lg:py-10">
     <div
-      class="container grid grid-rows-[repeat(3,auto)] grid-cols-2 lg:grid-cols-[1fr_0.5fr_0.5fr_auto] xl:grid-cols-[1fr_0.5fr_0.5fr_1fr] 2xl:grid-cols-[1fr_0.65fr_0.65fr_1fr] lg:grid-rows-1 gap-y-8 gap-x-4"
+      class="container grid grid-cols-2 grid-rows-[repeat(3,auto)] gap-x-4 gap-y-8 lg:grid-cols-[1fr_0.5fr_0.5fr_auto] lg:grid-rows-1 xl:grid-cols-[1fr_0.5fr_0.5fr_1fr] 2xl:grid-cols-[1fr_0.65fr_0.65fr_1fr]"
     >
-      <div class="flex flex-col justify-between gap-2 col-span-2 lg:col-auto lg:order-last">
-        <div class="flex gap-2 items-start">
+      <div class="col-span-2 flex flex-col justify-between gap-2 lg:order-last lg:col-auto">
+        <div class="flex items-start gap-2">
           <div class="flex-auto">
             <BaseInput
               v-model="email"
@@ -16,39 +16,39 @@
           </div>
           <TheButton mode="brand" small="true" @click="saveContact">Sit</TheButton>
         </div>
-        <p class="hidden lg:block self-center lg:self-end">
+        <p class="hidden self-center lg:block lg:self-end">
           Copyright <span>{{ new Date().getFullYear() }}</span
           >. All Rights Reserved
         </p>
       </div>
 
       <div
-        class="flex flex-col items-start gap-4 justify-self-center lg:justify-self-start lg:order-2"
+        class="flex flex-col items-start gap-4 justify-self-center lg:order-2 lg:justify-self-start"
       >
         <a
           v-for="(link, i) in linkProduct"
           :href="link.url"
           :key="i"
-          class="hover:text-brand transition-all duration-300 ease-in"
+          class="transition-all duration-300 ease-in hover:text-brand"
           >{{ link.title }}</a
         >
       </div>
       <div
-        class="flex flex-col items-start gap-4 justify-self-center lg:justify-self-start lg:order-3"
+        class="flex flex-col items-start gap-4 justify-self-center lg:order-3 lg:justify-self-start"
       >
         <a
           v-for="(link, i) in linkCommunity"
           :href="link.url"
           :key="i"
-          class="hover:text-brand transition-all duration-300 ease-in"
+          class="transition-all duration-300 ease-in hover:text-brand"
           >{{ link.title }}</a
         >
       </div>
 
       <div
-        class="col-span-2 lg:col-auto flex flex-col items-center lg:items-start justify-between gap-8 lg:order-1"
+        class="col-span-2 flex flex-col items-center justify-between gap-8 lg:order-1 lg:col-auto lg:items-start"
       >
-        <div class="w-full lg:w-auto flex justify-around gap-4">
+        <div class="flex w-full justify-around gap-4 lg:w-auto">
           <a
             v-for="(link, i) in linkSocial"
             :key="i"
@@ -57,7 +57,7 @@
             :class="link.title"
           ></a>
         </div>
-        <img src="../assets/logo-white.svg" alt="logo" class="w-36 h-6 lg:order-first" />
+        <img src="../assets/logo-white.svg" alt="logo" class="h-6 w-36 lg:order-first" />
         <p class="lg:hidden">
           Copyright <span>{{ new Date().getFullYear() }}</span
           >. All Rights Reserved

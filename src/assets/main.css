@@ -26,7 +26,7 @@
   }
 
   html {
-    @apply font-primary text-base/[1.75rem] text-primary font-normal overflow-x-hidden;
+    @apply overflow-x-hidden font-primary text-base/[1.75rem] font-normal text-primary;
   }
   html.block {
     @apply overflow-y-hidden;
@@ -46,22 +46,22 @@
 
 @layer components {
   .icon {
-    @apply font-icon font-normal not-italic leading-none normal-case antialiased text-2xl transition-all duration-300 ease-in;
+    @apply font-icon text-2xl font-normal normal-case not-italic leading-none antialiased transition-all duration-300 ease-in;
   }
 
   .icon-facebook2 {
-    @apply before:content-["\ea91"] text-white;
+    @apply text-white before:content-["\ea91"];
   }
   .icon-instagram {
-    @apply before:content-["\ea92"] text-white;
+    @apply text-white before:content-["\ea92"];
   }
   .icon-pinterest {
-    @apply before:content-["\ead1"] text-white;
+    @apply text-white before:content-["\ead1"];
   }
   .icon-twitter {
-    @apply before:content-["\ea96"] text-white;
+    @apply text-white before:content-["\ea96"];
   }
   .icon-youtube {
-    @apply before:content-["\ea9d"] text-white;
+    @apply text-white before:content-["\ea9d"];
   }
 }

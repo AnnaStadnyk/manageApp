@@ -1,11 +1,11 @@
 <template>
-  <div class="flex gap-3 items-start">
+  <div class="flex items-start gap-3">
     <input
       type="checkbox"
       :checked="modelValue"
       @change="$emit('update:modelValue', $event.target.checked)"
       @focus="$emit('cancel-error')"
-      class="appearance-none relative min-w-5 h-5 border-2 top-1 checked:after:absolute checked:after:-top-2 checked:after:left-[6px] checked:after:w-3 checked:after:h-5 checked:after:border-r-2 checked:after:border-b-2 checked:after:border-headline checked:after:transorm checked:after:rotate-45"
+      class="checked:after:transorm relative top-1 h-5 min-w-5 appearance-none border-2 checked:after:absolute checked:after:-top-2 checked:after:left-[6px] checked:after:h-5 checked:after:w-3 checked:after:rotate-45 checked:after:border-b-2 checked:after:border-r-2 checked:after:border-headline"
       :id="id"
       :class="{ 'border-headline': error === '', 'border-brand': error !== '' }"
     />
